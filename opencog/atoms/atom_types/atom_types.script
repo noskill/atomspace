@@ -22,6 +22,7 @@ LINK_VALUE <- VALUE     // vector of values ("link" holding values)
 VALUATION <- VALUE      // (atom,key,value) triple
 
 PTR_VALUE <- VALUE 		// value which represends pointer to the object
+TORCH_VALUE <- VALUE // torch::Tensor value
 
 // ===========================================================
 // All of the different flavors of truth values

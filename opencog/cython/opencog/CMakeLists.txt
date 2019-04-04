@@ -80,8 +80,10 @@ list(APPEND ADDITIONAL_MAKE_CLEAN_FILES "atomspace_api.h")
 ADD_LIBRARY(atomspace_cython
 	atomspace.cpp
 	PythonGroundedObject.cc
+	torch.cc
 )
 
+target_include_directories(atomspace_cython PRIVATE "/home/noskill/miniconda3/envs/pmvqa3/lib/python3.6/site-packages/torch/lib/include/")
 # The atomspace_api.h must be generated before PythonEval is compiled, thus
 # this phony-target is created. Why not add_dependencies between PythonEval
 # and atomspace_cython? -> Because that results in a cyclic dependency.
